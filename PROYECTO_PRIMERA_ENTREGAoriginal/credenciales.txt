@@ -1,6 +1,0 @@
-<<<<<<< HEAD
-prueba@uc.ac.cr
-=======
-prueba@uc.ac.cr
->>>>>>> efea9ac04690bde684e316c626f538869e4640b0
-123456
