@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Iniciar Sesión UC</title>
+</head>
+<body style="font-family: Arial, sans-serif; 
+             background: linear-gradient(to bottom, #ffffff, #d0d0d0); 
+             margin: 0; 
+             height: 100vh; 
+             display: flex; 
+             justify-content: center; 
+             align-items: center;
+             background-image: url('img/fondo_login.jpg');
+             background-size: cover;
+             background-position: center;
+             background-repeat: no-repeat;
+             background-attachment: fixed;
+             background-color: rgba(0, 0, 0, 0.5);
+             background-blend-mode: overlay;
+             ">
+
+  <main style="background-color: white; padding: 30px 40px; border-radius: 10px; box-shadow: 0 0 15px rgba(0,0,0,0.2); width: 100%; max-width: 400px;">
+    
+    <header>
+        <h1 style="text-align: center; color: #06416b; font-size: 24px; margin-bottom: 20px;">UC</h1>
+        <p style="text-align: center; color: #01243d; font-size: 16px;">Por favor, ingrese sus credenciales.</p>
+    </header>
+
+    <section>
+      <form action="inicio.html" method="get" style="display: flex; flex-direction: column; gap: 15px;">
+
+        <!-- Campo de correo -->
+        <label style="font-weight: bold; color: #01243d;">
+          Correo institucional:
+          <input 
+            type="email" 
+            required 
+            oninvalid="this.setCustomValidity('Por favor ingrese un correo válido.')" 
+            oninput="setCustomValidity('')" 
+            style="width: 100%; padding: 8px; border-radius: 5px; border: 1px solid #ccc;">
+        </label>
+
+        <!-- Campo de contraseña -->
+        <label style="font-weight: bold; color: #01243d;">
+          Contraseña:
+          <input 
+            type="password"
+            required 
+            minlength="6" 
+            oninvalid="this.setCustomValidity('La contraseña debe tener al menos 6 caracteres.')" 
+            oninput="setCustomValidity('')" 
+            style="width: 100%; padding: 8px; border-radius: 5px; border: 1px solid #ccc;">
+        </label>
+
+        <!-- Botón de enviar -->
+        <button type="submit" style="padding: 10px; background-color: #06416b; color: white; border: none; border-radius: 5px; cursor: pointer; font-weight: bold;">
+          Entrar
+        </button>
+      </form>
+    </section>
+  </main>
+
+</body>
+</html>
+
