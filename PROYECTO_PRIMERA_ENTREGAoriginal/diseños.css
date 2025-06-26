@@ -1,0 +1,313 @@
+/* --- CUERPO DE LA PAGINA --- */
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: rgb(220, 220, 220);
+  display: flex;
+  flex-direction: column;
+}
+
+.lista-estilo-tabla {
+  margin: 50px auto;
+
+}
+/*-------------------------------------------------------------------*/
+/*MENU PRINCIPAL*/
+.menu-principal {
+  background-color: #06416b;
+  padding: 30px 0;
+  box-shadow: inset 0px -20px 10px rgba(0, 0, 0, 0.295);
+}
+
+.contenedor-menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  max-width: 1200px;
+  margin: 0% auto;
+  width: 100%;
+  padding: 0 20px;
+}
+
+.logo img {
+  height: 100px;
+  border-radius: 10PX;
+}
+/*-------------------------------------------------------------------*/
+/*LINKS DEL MENU PRINCIPAL*/
+.menu-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-links li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px 12px;
+  transition: all 0.1s ease;
+}
+
+.menu-links li a:hover {
+  background-color: #01243d;
+  color: #f66661;
+  border-radius: 5px;
+  transform: scale(1.05);
+}
+/*---------------------------------------------------------------------*/
+/*IMAGEN CENTRAL*/
+.contenido-central {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px 0;
+  flex-grow: 1;
+}
+
+.contenido-central img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 0 30px rgb(114, 114, 114);
+}
+/*----------------------------------------------------------------------*/
+/*PIE DE LA PAGINA*/
+footer {
+  background-color: #06416b;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  box-shadow: inset 0px 20px 10px rgba(0, 0, 0, 0.295);
+}
+
+footer a {
+  color: #ffffff;
+  transition: color 0.1s ease;
+}
+
+footer a:hover {
+  color: #f66661;
+  text-decoration: underline;
+}
+/*-----------------------------------------------------------------------*/
+/*ADAPTACIÓN MENU A CELULARES PAGINA INICIO*/
+@media (max-width: 640px) {
+  .contenedor-menu {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .menu-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .contenido-central {
+    flex-direction: column;
+    padding: 10px;
+  }
+  
+}
+/*-----------------------------------------------------------------------*/
+/*TABLA DE PROFESORES*/
+
+.lista-estilo-tabla h1 { /*Titulo de profesores y alumnos*/
+  text-align: center;
+  color: #06416b;
+  margin-bottom: 50px;
+}
+
+.tabla-profesores { /*Espaciado entre profesores*/
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.fila-profesor { /*Fondo blanco de inf. de los profes*/
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
+}
+
+.fila-profesor:hover {
+  background-color: #f66661;
+}
+
+.iniciales {
+  width: 40px;
+  height: 40px;
+  background-color: #06416b;
+  color: white;
+  font-weight: bold;
+  border-radius: 50%;
+  display: flex; /*Centrar las iniciales*/
+  align-items: center;/*Centrar las iniciales*/
+  justify-content: center;/*Centrar las iniciales*/
+  margin-right: 15px;
+  flex-shrink: 0;
+}
+
+.nombre {
+  font-weight: bold;
+  margin: 0;
+  color: #01243d;
+}
+
+.rol {
+  font-size: 14px;
+  color: #01243d;
+  margin: 2px 0 0 0;
+}
+
+.fila-profesor-expandible {
+  border-radius: 8px;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0,0,0,0.08);
+  overflow: hidden;
+  margin-bottom: 10px;
+  transition: all 0.3s ease;
+}
+
+/* Oculta el checkbox */
+.fila-profesor-expandible input[type="checkbox"] {
+  display: none;
+}
+
+/* Estilo del encabezado (nombre e iniciales) */
+.encabezado-profesor {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 12px;
+  transition: background-color 0.1s ease;
+}
+
+.encabezado-profesor:hover {
+  background-color: #f66661;
+}
+
+.encabezado-profesor .iniciales {
+  width: 40px;
+  height: 40px;
+  background-color: #06416b;
+  color: white;
+  font-weight: bold;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 15px;
+  flex-shrink: 0;
+}
+
+.encabezado-profesor .nombre {
+  font-weight: bold;
+  margin: 0;
+  color: #01243d;
+}
+
+.encabezado-profesor .rol {
+  font-size: 14px;
+  color: #01243d;
+  margin: 2px 0 0 0;
+}
+
+/* Info oculta por defecto */
+.informacion-del-profesor {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 15px;
+  transition: all 0.3s ease;
+  background-color: #f3faff;
+  color: #01243d;
+  font-size: 14px;
+}
+
+/* Al seleccionar mostrar info */
+.fila-profesor-expandible input:checked + label + .informacion-del-profesor {
+  max-height: 200px;
+  padding: 10px 15px 15px 15px;
+}
+/*---------------------------------------------------------------------------------*/
+/*Lista de estudiantes*/
+.lista-estilo-tabla-alumnos h1 { /*Titulo alumnos*/
+  text-align: center;
+  color: #06416b;
+  margin-bottom: 20px;
+}
+.lista-de-estudiantes {
+  padding: 20px;
+  max-width: 600px;
+}
+
+.lista-estudiantes {
+  display: flex;
+  flex-direction: column;
+}
+
+.estudiante {
+  background-color: #f4f4f4;
+  border: 1px solid #01243d;
+  padding: 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.estudiante:hover {
+  background-color: #f66661;
+}
+
+.lista-estilo-tabla-alumnos{
+  display: flex;
+  flex-direction: column;
+  margin: 30px 20px;
+}
+/*------------------------------*/
+/*CURSOS*/
+/* === Estilo especial para cursos === */
+.lista-estilo-tabla.cursos .tabla-profesores {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.lista-estilo-tabla.cursos .fila-profesor-expandible {
+  width: 300px;
+  height: 300px;
+  text-align: center;
+  padding: 20px;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.lista-estilo-tabla.cursos .fila-profesor-expandible:hover {
+  transform: scale(1.03);
+}
+/*-----------------------------------------------------------*/
+/*imagenes de cursos*/
+.icono-curso {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+}
+
+
+
+

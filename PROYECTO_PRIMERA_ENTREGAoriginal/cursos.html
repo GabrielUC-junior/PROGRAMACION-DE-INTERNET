@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UC CURSOS</title>
+  <link rel="stylesheet" href="diseños.css">
+</head>
+
+<body>
+
+  <!-- Menú -->
+  <nav class="menu-principal">
+    <div class="contenedor-menu">
+      <div class="logo">
+        <img src="img/logo.jpg" alt="Logo Universidad Central">
+      </div>
+      <ul class="menu-links">
+        <li><a href="inicio.html">Inicio</a></li>
+        <li><a href="profesores.html">Profesores</a></li>
+        <li><a href="estudiantes.html">Estudiantes</a></li>
+        <li><a href="cursos.html">Cursos</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Cursos -->
+  <main class="lista-estilo-tabla">
+    <h1>Ingeniería en Informática</h1>
+
+    <div class="tabla-profesores">
+
+      <!-- Curso 1 -->
+      <div class="fila-profesor-expandible">
+        <input type="checkbox" id="curso1">
+        <label for="curso1" class="encabezado-profesor">
+          <img src="img/curso1.png" alt="Icono del curso" class="icono-curso">
+          <div class="nombre-rol">
+            <p class="nombre">Programación de Internet</p>
+            <p class="rol">Curso 1</p>
+          </div>
+        </label>
+        <div class="informacion-del-profesor">
+          <p><strong>Descripción:</strong> Desarrollo de aplicaciones web dinámicas utilizando tecnologías del lado cliente y servidor.</p>        
+        </div>
+      </div>
+
+      <!-- Curso 2 -->
+      <div class="fila-profesor-expandible">
+        <input type="checkbox" id="curso2">
+        <label for="curso2" class="encabezado-profesor">
+          <img src="img/curso2.jpg" alt="Icono del curso" class="icono-curso">
+          <div class="nombre-rol">
+            <p class="nombre">Programación de Lenguajes</p>
+            <p class="rol">Curso 2</p>
+          </div>
+        </label>
+        <div class="informacion-del-profesor">
+          <p><strong>Descripción:</strong> Fundamentos y paradigmas de lenguajes de programación modernos.</p>
+        </div>
+      </div>
+
+      <!-- Curso 3 -->
+      <div class="fila-profesor-expandible">
+        <input type="checkbox" id="curso3">
+        <label for="curso3" class="encabezado-profesor">
+          <img src="img/curso3.png" alt="Icono del curso" class="icono-curso">
+          <div class="nombre-rol">
+            <p class="nombre">Base de Datos SQL</p>
+            <p class="rol">Curso 3</p>
+          </div>
+        </label>
+        <div class="informacion-del-profesor">
+          <p><strong>Descripción:</strong> Diseño, consulta y administración de bases de datos relacionales con SQL.</p>
+        </div>
+      </div>
+
+      <!-- Curso 4 -->
+      <div class="fila-profesor-expandible">
+        <input type="checkbox" id="curso4">
+        <label for="curso4" class="encabezado-profesor">
+          <img src="img/curso4.jpg" alt="Icono del curso" class="icono-curso">
+          <div class="nombre-rol">
+            <p class="nombre">Arquitectura de Computadores</p>
+            <p class="rol">Curso 4</p>
+          </div>
+        </label>
+        <div class="informacion-del-profesor">
+          <p><strong>Descripción:</strong> Estructura, componentes y funcionamiento interno de un computador.</p>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Pie de página -->
+  <footer>
+    <p>&copy; 2025 Universidad Central. Todos los derechos reservados.</p>
+    <p>Correo: <a href="mailto:info@uc.ac.cr">info@uc.ac.cr</a></p>
+  </footer>
+
+</body>
+</html>
